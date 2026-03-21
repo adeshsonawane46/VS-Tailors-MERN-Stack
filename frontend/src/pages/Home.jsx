@@ -319,7 +319,7 @@ function Home() {
           <div className="circle">
             <img
               id="exper"
-              src="/Images/31+ years.png"
+              src="/Images/31_years.png"
               alt="Experience"
             />
           </div>
