@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Loader from "../components/Loader";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 import "../styles/style.css";
 import "../styles/contact.css";
@@ -16,6 +17,7 @@ const API_BASE =
 function Contact() {
 
 const location = useLocation();
+const navigate = useNavigate();
 
 const [formData, setFormData] = useState({
 name: "",
@@ -67,7 +69,7 @@ const handleSubmit = async (e) => {
 
   if (!token) {
     alert("Please login first to book an appointment");
-    window.location.href = "/login";
+    navigate("/login");
     return;
   }
 

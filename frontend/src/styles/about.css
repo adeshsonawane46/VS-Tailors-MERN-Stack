@@ -61,7 +61,7 @@ body {
   
   /* Hero Section */
   #about-hero {
-    background-image: url("Images/About-hero.png");
+    background-image: url("/Images/About-hero.png");
     width: 100%;
     height: 40vh;
     background-size: cover;
