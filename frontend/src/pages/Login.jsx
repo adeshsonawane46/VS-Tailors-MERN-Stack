@@ -6,7 +6,7 @@ import { GoogleLogin } from "@react-oauth/google";
 const API_BASE =
   window.location.hostname === "localhost"
     ? "http://localhost:5000"
-    : "https://vs-tailors.onrender.com";
+    : "https://vs-tailors-backend.onrender.com";
 
 function Login() {
 

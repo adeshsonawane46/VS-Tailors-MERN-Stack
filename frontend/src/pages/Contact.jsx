@@ -8,6 +8,11 @@ import Footer from "../components/Footer";
 import "../styles/style.css";
 import "../styles/contact.css";
 
+const API_BASE =
+  window.location.hostname === "localhost"
+    ? "http://localhost:5000"
+    : "https://vs-tailors-backend.onrender.com";
+
 function Contact() {
 
 const location = useLocation();
@@ -71,7 +76,7 @@ const handleSubmit = async (e) => {
 
   try {
     const res = await fetch(
-      "/api/appointments",
+      `${API_BASE}/api/appointments`,
       {
         method: "POST",
         headers: {
