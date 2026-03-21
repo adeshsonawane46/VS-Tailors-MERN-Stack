@@ -1,36 +1,14 @@
 const express = require("express");
 const router = express.Router();
 const Appointment = require("../models/Appointment");
-const nodemailer = require("nodemailer");
+const SibApiV3Sdk = require("sib-api-v3-sdk");
 
-let transporter = null;
+// Brevo setup
+const client = SibApiV3Sdk.ApiClient.instance;
+const apiKey = client.authentications["api-key"];
+apiKey.apiKey = process.env.BREVO_API_KEY;
 
-// Create transporter only if SMTP exists
-if (
-  process.env.SMTP_HOST &&
-  process.env.SMTP_PORT &&
-  process.env.SMTP_USER &&
-  process.env.SMTP_PASS
-) {
-  transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT),
-    secure: Number(process.env.SMTP_PORT) === 465,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
-
-  // Verify SMTP connection
-  transporter.verify((error) => {
-    if (error) {
-      console.log("SMTP Connection Error:", error);
-    } else {
-      console.log("SMTP Server Ready to Send Emails");
-    }
-  });
-}
+const tranEmailApi = new SibApiV3Sdk.TransactionalEmailsApi();
 
 // SAFE sanitizer
 const sanitize = (text) => {
@@ -82,39 +60,41 @@ router.post("/", async (req, res) => {
       message: "Appointment booked successfully!",
     });
 
-    // Send emails in background
-    if (transporter) {
-      const serviceText = `${service}${
-        customService ? " - " + customService : ""
-      }`;
+    // Prepare service text
+    const serviceText = `${service}${
+      customService ? " - " + customService : ""
+    }`;
 
-      // ADMIN EMAIL
-      transporter
-        .sendMail({
-          from: `VS Tailors <${process.env.SENDER_EMAIL}>`,
-          to: process.env.SENDER_EMAIL,
-          subject: "New Appointment Booked",
-          html: `
-            <h3>New Appointment Details</h3>
-            <p><b>Name:</b> ${name}</p>
-            <p><b>Email:</b> ${email}</p>
-            <p><b>Contact:</b> ${contact}</p>
-            <p><b>Service:</b> ${serviceText}</p>
-            <p><b>Quantity:</b> ${quantity || "Not specified"}</p>
-            <p><b>Notes:</b> ${notes || "None"}</p>
-          `,
-        })
-        .catch((err) =>
-          console.error("Admin email failed:", err.message)
-        );
+    // 🔹 ADMIN EMAIL
+    tranEmailApi.sendTransacEmail({
+      sender: {
+        email: process.env.SENDER_EMAIL,
+        name: "VS Tailors",
+      },
+      to: [{ email: process.env.SENDER_EMAIL }],
+      subject: "New Appointment Booked",
+      htmlContent: `
+        <h3>New Appointment Details</h3>
+        <p><b>Name:</b> ${name}</p>
+        <p><b>Email:</b> ${email}</p>
+        <p><b>Contact:</b> ${contact}</p>
+        <p><b>Service:</b> ${serviceText}</p>
+        <p><b>Quantity:</b> ${quantity || "Not specified"}</p>
+        <p><b>Notes:</b> ${notes || "None"}</p>
+      `,
+    }).catch((err) =>
+      console.error("Admin email failed:", err.message)
+    );
 
-      // USER EMAIL
-      transporter
-        .sendMail({
-          from: `VS Tailors <${process.env.SENDER_EMAIL}>`,
-          to: email,
-          subject: "🎉 Appointment Confirmed - VS Tailors",
-          html: `
+    // 🔹 USER EMAIL
+    tranEmailApi.sendTransacEmail({
+      sender: {
+        email: process.env.SENDER_EMAIL,
+        name: "VS Tailors",
+      },
+      to: [{ email: email }],
+      subject: "🎉 Appointment Confirmed - VS Tailors",
+      htmlContent: `
 <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
 
   <h2 style="color:#d35400;">Hello ${name},</h2>
@@ -148,8 +128,8 @@ router.post("/", async (req, res) => {
 
   <p>
     Contact us anytime:
-    <a href="mailto:vsuniformmanufacturer@gmail.com">
-      vsuniformmanufacturer@gmail.com
+    <a href="mailto:${process.env.SENDER_EMAIL}">
+      ${process.env.SENDER_EMAIL}
     </a>
   </p>
 
@@ -166,11 +146,10 @@ router.post("/", async (req, res) => {
 
 </div>
 `,
-        })
-        .catch((err) =>
-          console.error("User email failed:", err.message)
-        );
-    }
+    }).catch((err) =>
+      console.error("User email failed:", err.message)
+    );
+
   } catch (err) {
     console.error("Appointment error:", err);
 

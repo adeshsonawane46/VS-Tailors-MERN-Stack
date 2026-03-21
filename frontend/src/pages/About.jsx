@@ -181,7 +181,7 @@ function About() {
         <h2 className="team-title">
           Meet<span> Our Founders</span>
         </h2>
-        <p class="team-subtitle">The people behind VS Tailors, carrying forward 30+ years of excellence.</p>
+        <p class="team-subtitle">The people behind VS Tailors, working together to deliver quality and trust.</p>
 
         <div className="team-container">
           <div className="team-card">
