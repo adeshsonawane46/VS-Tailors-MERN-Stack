@@ -1,0 +1,720 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Header Page Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222
+}
+
+h4 {
+    font-size: 20px;
+    color: #222
+}
+
+h6 {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+}
+
+
+/* Global Reset */
+.about-wrapper {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f6f6f6, #e0e0e0);
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  
+  /* Hero Section */
+  #about-hero {
+    background-image: url("Images/About-hero.png");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+    margin-top: 77px;
+
+}
+
+#about-hero h2 {
+    color:#cce7d0;
+}
+
+#about-hero p{
+    color: #ffffff;
+}
+
+  
+  /* About Us Section */
+  .about-us {
+    background: #fff;
+    padding: 60px 20px;
+  }
+  
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-text {
+    flex: 1;
+    margin-right: 30px;
+  }
+  
+  .about-text h2 {
+    font-size: 2.5rem;
+    color: #d32f2f;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .about-text h2 span {
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .about-text h3 {
+    font-size: 1.5rem;
+  }
+  
+  .about-text p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+/* Section Styling */
+.trusted-by {
+  text-align: center;
+  padding: 70px 20px;
+  background: #eee4e4;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Title */
+.trusted-by h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: red;
+}
+
+.trusted-by h2 span {
+  color: black;
+}
+
+.trusted-by h2::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: #6366f1;
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+/* Subtitle */
+.trusted-subtitle {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin-bottom: 45px;
+}
+
+/* Grid Layout */
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* exactly 4 per row */
+  gap: 25px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Client Card */
+.client-card {
+  background: #ffffff;
+  padding: 22px 15px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #374151;
+  border: 1px solid #000000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: default;
+  white-space: pre-line;
+}
+
+.client-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.2);
+  border-color: #6366f1;
+  background: linear-gradient(135deg, #ffffff, #f9fafb);
+  color: #111827;
+}
+
+.more-clients {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: #374151;
+  opacity: 0.8;
+}
+
+/* Responsive (for mobile & tablet) */
+@media (max-width: 992px) {
+  .client-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .client-grid {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
+  }
+}
+
+
+  
+/* Mission & Vision Modern Section */
+.mission-vision-modern {
+  background: linear-gradient(135deg, #f8f9fc, #e3eaf7);
+  padding: 70px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-vision-modern::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(25, 89, 226, 0.15);
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.mission-vision-modern .mission-vision-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.mission-vision-card {
+  background: #fff;
+  flex: 1;
+  min-width: 300px;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.mission-vision-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.mission-vision-card .icon {
+  font-size: 3rem;
+  color: #1959e2;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.mission-vision-card:hover .icon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.mission-vision-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.mission-vision-card p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mission-vision-modern .mission-vision-container {
+    flex-direction: column;
+  }
+}
+
+  
+  /* Core Values Modern */
+.core-values-modern {
+  background: linear-gradient(135deg, #f9f9fb, #eef1f6);
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.core-values-modern h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: red;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.core-values-modern h2 span {
+  color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+.core-values-modern .core-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px 25px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.value-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 2px;
+  background: linear-gradient(135deg, #1959e2, #00c6ff);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+.value-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+}
+
+.value-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #1959e2;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover .icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.value-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.value-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .core-values-modern h2 {
+    font-size: 2rem;
+  }
+  .value-card {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: 1fr; /* single column on mobile */
+  }
+}
+
+
+  
+/*Meet Our Founders Section*/
+.founders-section {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #f9fafb, #ffffff);
+}
+
+.team-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: red;
+  font-family: 'Poppins', sans-serif;
+}
+
+.team-title span {
+  color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+.team-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 105px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  width: 290px;
+  text-align: center;
+}
+
+
+.image-box img {
+  position: absolute;
+  bottom: 0;
+  top: -100px;      
+  left: 0;
+  width: 100%;
+  height: 140%;    
+  object-fit: cover;
+  border-bottom-left-radius: 12px;  
+  border-bottom-right-radius: 12px;
+}
+
+.team-card h3 {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.team-card .role {
+  font-size: 0.9rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 5px;
+}
+
+/* Background color variations */
+/* Common pattern for all boxes */
+.image-box {
+
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  position: relative;
+  overflow: visible;
+
+
+  background-image: linear-gradient(135deg, rgba(58, 58, 58, 0.15) 25%, transparent 25%),
+                    linear-gradient(225deg, rgba(58, 58, 58, 0.15) 25%, transparent 25%),
+                    linear-gradient(45deg, rgba(58, 58, 58, 0.15) 25%, transparent 25%),
+                    linear-gradient(315deg, rgba(58, 58, 58, 0.15) 25%, transparent 25%);
+  background-size: 40px 40px;
+  
+}
+
+/* Different base colors */
+.bg-orange {
+  background-color: #fcd34d; /* Warm Yellow */
+}
+
+.bg-green {
+  background-color: #34d399; /* Emerald Green */
+}
+
+.bg-pink {
+  background-color: #ec4899; /* Pink Rose */
+}
+
+.bg-blue {
+  background-color: #60a5fa; /* Soft Blue (if you add 4th founder) */
+}
+
+
+/* Tablet (1024px) */
+@media (max-width: 1024px) {
+    /* About Hero Section */
+    #about-hero {
+        height: 30vh;
+        padding: 10px;
+        margin-top: 77px;
+    }
+    #about-hero h2 {
+        font-size: 36px;
+    }
+    #about-hero p {
+        font-size: 14px;
+    }
+
+    /* About Us Section */
+    .about-us {
+        padding: 40px 15px;
+    }
+    .about-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .about-text {
+        margin-right: 0;
+        text-align: center;
+    }
+    .about-text h2 {
+        font-size: 2rem;
+    }
+    .about-image img {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Trusted By Section */
+    .trusted-by {
+        padding: 50px 15px;
+    }
+    .trusted-by h2 {
+        font-size: 2rem;
+    }
+    .client-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    .client-card {
+        padding: 18px 10px;
+        font-size: 0.9rem;
+        white-space: pre-line;
+    }
+
+    /* Mission & Vision Section */
+    .mission-vision-modern .mission-vision-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .mission-vision-card {
+        padding: 30px 20px;
+        min-width: unset;
+    }
+    .mission-vision-card h2 {
+        font-size: 1.6rem;
+    }
+    .mission-vision-card p {
+        font-size: 1rem;
+    }
+
+    /* Core Values Section */
+    .core-values-modern h2 {
+        font-size: 2rem;
+    }
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .value-card {
+        padding: 30px 20px;
+    }
+
+    /* Founders Section */
+    .team-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .team-card {
+        width: 80%;
+        max-width: 300px; 
+    }
+
+    .team-card h3 {
+      margin-top: 50px;
+    }
+    .image-box img {
+        top: -80px;
+    }
+}
+
+/* ALL Media Queries */
+
+/* Mobile (767px) */
+@media (max-width: 768px) {
+    /* About Hero Section */
+    #about-hero {
+        height: 26vh;
+        margin-top: 68px;
+    }
+    #about-hero h2 {
+        font-size: 30px;
+    }
+    #about-hero p {
+        font-size: 16px;
+    }
+    
+    /* About Us Section */
+    .about-us {
+        padding: 30px 10px;
+    }
+    .about-text h2 {
+        font-size: 1.8rem;
+    }
+    .about-text p {
+        font-size: 0.9rem;
+    }
+
+    /* Trusted By Section */
+    .trusted-by {
+        padding: 40px 10px;
+    }
+    .trusted-by h2 {
+        font-size: 1.8rem;
+    }
+    .client-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .client-card {
+        font-size: 0.8rem;
+        white-space: pre-line;
+    }
+    .trusted-subtitle {
+        font-size: 0.9rem;
+    }
+
+    /* Mission & Vision Section */
+    .mission-vision-modern .mission-vision-container {
+        gap: 15px;
+    }
+    .mission-vision-card {
+        padding: 20px;
+    }
+    .mission-vision-card h2 {
+        font-size: 1.4rem;
+    }
+    .mission-vision-card p {
+        font-size: 0.9rem;
+    }
+    
+    /* Core Values Section */
+    .core-values-modern h2 {
+        font-size: 1.8rem;
+    }
+    .core-values-modern .subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .value-card {
+        padding: 20px;
+    }
+    .value-card h3 {
+        font-size: 1.2rem;
+    }
+    .value-card p {
+        font-size: 0.9rem;
+    }
+
+    /* Founders Section */
+    .founders-section {
+        padding: 40px 10px;
+    }
+    .team-title {
+        font-size: 1.8rem;
+    }
+    .team-subtitle {
+        font-size: 0.9rem;
+    }
+    .team-card {
+        width: 100%;
+        max-width: 250px;
+    }
+    .image-box img {
+        top: -60px;
+        height: 120%;
+    }
+}
+

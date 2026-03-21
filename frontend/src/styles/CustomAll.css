@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Product Page Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222
+}
+
+h4 {
+    font-size: 20px;
+    color: #222
+}
+
+h6 {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+}
+
+.featured-products-custom {
+    padding: 40px 10%;
+    background: #e0e0e0;
+    text-align: start;
+    margin-top: 77px;
+}
+
+.section-title-custom {
+   
+    padding: 15px;
+    display: inline-block;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.section-title-custom h2 {
+    font-size: 36px;
+    color: #d32f2f;
+    margin: 0;
+}
+
+.section-title-custom h2 span {
+    color: #000;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
+
+.product-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-box h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    margin-bottom: 1px;
+}
+
+.product-box:hover {
+    transform: scale(1.05);
+}
+
+.product-box img {
+    width: 100%;
+    max-width: 320px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+}
+
+.product-box .stars {
+    font-size: 25px;
+    color: #FFD700;
+    margin: 10px 0;
+    margin-top: 1px;
+}
+
+/* Get Tailored Button */
+.get-tailored {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #d32f2f;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.get-tailored:hover {
+    background: #a81919;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 0 10px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: #333;
+}
+
+.section-title h2 span {
+    color: #d32f2f;
+}
+
+/* 🌟 Custom Design Section */
+.custom-design-section {
+  background: linear-gradient(to right, #fff5f5, #ffe5e5);
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-wrapper {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.custom-wrapper h2 {
+  font-size: 38px;
+  color: #d32f2f;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.custom-wrapper h2 span {
+  color: #000;
+  background: linear-gradient(to right, #d32f2f, #ff6f61);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.custom-wrapper p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 35px;
+}
+
+/* Gradient Button */
+.appointment-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #d32f2f, #ff6f61);
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(211, 47, 47, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.appointment-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(211, 47, 47, 0.35);
+}
+
+/* Optional: Floating gradient circle background */
+.custom-design-section::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(211, 47, 47, 0.1), transparent);
+  top: -50px;
+  left: -50px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.custom-design-section::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 111, 97, 0.1), transparent);
+  bottom: -50px;
+  right: -50px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* ===================================== */
+/* ========= Media Queries ============= */
+/* ===================================== */
+
+/* Tablet & Smaller Devices (max-width: 1024px) */
+@media (max-width: 1024px) {
+
+    /* Product Grid */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .product-box img {
+        height: 250px;
+    }
+
+    .product-box h3 {
+        font-size: 22px;
+    }
+
+
+    /* Custom Design Section */
+    .custom-design-section {
+        padding: 60px 20px;
+    }
+
+    .custom-wrapper h2 {
+        font-size: 30px;
+    }
+
+    .custom-wrapper p {
+        font-size: 16px;
+    }
+
+    .appointment-btn {
+        padding: 12px 28px;
+        font-size: 16px;
+    }
+}
+
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+
+    .featured-products-custom {
+        margin-top: 68px;
+    }
+
+    /* Center Section Title */
+    .section-title-custom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .section-title-custom h2 {
+        font-size: 23px;
+        text-align: center;
+    }
+
+    /* Product Grid */
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .product-box {
+        padding: 15px;
+    }
+
+    .product-box img {
+        height: auto;
+        max-height: 280px;
+        object-fit: cover;
+    }
+
+    .product-box h3 {
+        font-size: 20px;
+    }
+
+    .get-tailored {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    /* Custom Design Section */
+    .custom-design-section {
+        padding: 40px 10px;
+    }
+
+    .custom-wrapper h2 {
+        font-size: 24px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .custom-wrapper p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .appointment-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+}
+
+/* Tablet (768px – 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+
+  .product-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .section-title-custom h2 {
+        font-size: 26px;
+        text-align: center;
+  }
+
+}

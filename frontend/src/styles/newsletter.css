@@ -1,0 +1,250 @@
+/* Signup Newletter Section */
+
+.newsletter {
+    width: 100%;
+    background: #f5f8ff; /* Light Blue Shade */
+    color: #333;
+    text-align: center;
+    padding: 70px 5%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+}
+
+/* Newsletter Content */
+.newsletter-container {
+    max-width: 700px;
+    margin: auto;
+    
+}
+
+/* Heading */
+.newsletter-container h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+/* Description */
+.newsletter-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Form */
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    
+}
+
+/* Input Field */
+.newsletter input {
+    width: 300px;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    text-align: center;
+    
+}
+
+/* Subscribe Button */
+.newsletter button {
+    background: #0056b3;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+}
+
+.newsletter button:hover {
+    background: #004494;
+}
+
+#success-message {
+    font-weight: bold;
+    margin-top: 10px;
+    color: green;
+}
+
+
+/* WhatsApp Link */
+.whatsapp-link {
+    margin-top: 25px;
+}
+
+.whatsapp-link a {
+    display: inline-flex;
+    align-items: center;
+    background: #25D366;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.whatsapp-link img {
+    width: 35px;
+    margin-right: 10px;
+}
+
+.whatsapp-link a:hover {
+    background: #1EBF5F;
+}
+
+.whatsapp-link a:active,
+.whatsapp-link a:focus {
+    background: #1EBF5F;
+}
+
+/* ============================= */
+/* Large Laptops (1200px and below) */
+/* ============================= */
+@media (max-width: 1200px) {
+    .newsletter {
+        padding: 60px 5%;
+    }
+
+    .newsletter-container h2 {
+        font-size: 30px;
+    }
+
+    .newsletter-container p {
+        font-size: 17px;
+    }
+}
+
+/* ============================= */
+/* Laptops / Small Desktops */
+/* ============================= */
+@media (max-width: 1024px) {
+
+    .newsletter-container h2 {
+        font-size: 28px;
+    }
+
+    .newsletter-container p {
+        font-size: 16px;
+    }
+
+    .newsletter input {
+        width: 260px;
+        padding: 14px;
+    }
+
+    .newsletter button {
+        padding: 14px 22px;
+        font-size: 15px;
+    }
+}
+
+/* ============================= */
+/* Tablets */
+/* ============================= */
+@media (max-width: 768px) {
+
+    .newsletter {
+        padding: 50px 6%;
+    }
+
+    .newsletter-container h2 {
+        font-size: 26px;
+    }
+
+    .newsletter-container p {
+        font-size: 15px;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .newsletter input {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .newsletter button {
+        width: 100px;
+    }
+
+    .whatsapp-link img {
+        width: 30px;
+    }
+}
+
+/* ============================= */
+/* Mobile Devices */
+/* ============================= */
+@media (max-width: 480px) {
+
+    .newsletter {
+        padding: 40px 6%;
+    }
+
+    .newsletter-container h2 {
+        font-size: 22px;
+    }
+
+    .newsletter-container p {
+        font-size: 14px;
+    }
+
+    .newsletter input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .newsletter button {
+        padding: 12px;
+        font-size: 14px;
+        width: 100px;
+    }
+
+    .whatsapp-link a {
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+
+    .whatsapp-link img {
+        width: 26px;
+    }
+}
+
+/* ============================= */
+/* Very Small Phones */
+/* ============================= */
+@media (max-width: 320px) {
+
+    .newsletter-container h2 {
+        font-size: 20px;
+    }
+
+    .newsletter-container p {
+        font-size: 13px;
+    }
+
+    .newsletter input,
+    .newsletter button {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .newsletter button {
+        width: 100px;
+    }
+}

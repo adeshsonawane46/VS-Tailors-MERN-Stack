@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Product Page Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222
+}
+
+h4 {
+    font-size: 20px;
+    color: #222
+}
+
+h6 {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+}
+
+/* =============================
+   Premium Professional Product Page
+   ============================= */
+
+/* Background wrapper */
+.pro-container {
+  width: 90%;
+  margin: 60px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Dark teal gradient */
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  margin-top: 98px;
+}
+
+/* Product layout */
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Main Image */
+.product-images {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+#main-image {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 20px;
+  border: 4px solid #d4af37; /* Elegant gold border */
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+#main-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.35);
+}
+
+/* Info card */
+.product-info {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(18px);
+  padding: 40px 45px;
+  border-radius: 20px;
+  color: #f5f5f5;
+  text-align: left;
+  transition: transform 0.4s ease;
+}
+
+.product-info:hover {
+  transform: translateY(-5px);
+}
+
+.product-info h1 {
+  font-size: 34px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 800;
+  border-left: 5px solid #d4af37; /* Gold accent */
+  padding-left: 12px;
+}
+
+.product-info p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #cfd8dc;
+  margin-bottom: 35px;
+  font-weight: 400;
+}
+
+/* Button */
+.product-book-button {
+  background: linear-gradient(135deg, #d4af37, #f0c75e); /* gold gradient */
+  color: #0f2027;
+  border: none;
+  padding: 16px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 10px;
+  box-shadow: 0 8px 22px rgba(212, 175, 55, 0.4);
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 0.5px;
+}
+
+.product-book-button:hover {
+  background: linear-gradient(135deg, #f0c75e, #d4af37);
+  transform: translateY(-5px) scale(1.04);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.55);
+}
+
+.featured-products-pro {
+    padding: 40px 10%;
+    background: #e0e0e0;
+    text-align: center;
+}
+
+.section-title-det {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  padding: 0 10px;
+}
+
+.section-title-det h2 {
+    font-size: 36px;
+    color: #d32f2f;
+    margin: 0;
+}
+
+.section-title-det h2 span {
+    color: #000;
+}
+
+.bulk-grid-pro {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 60px; /* Increased spacing between boxes */
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.productwide-box-pro {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.productwide-box-pro img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
+.productwide-box-pro:hover {
+    transform: scale(1.05);
+}
+
+.productwide-box-pro h3 {
+    font-size: 26px;
+    margin-top: 15px;
+}
+
+.productwide-box-pro .stars {
+    font-size: 25px;
+    color: #FFD700;
+    margin: 10px 0;
+    margin-top: 1px;
+}
+
+/* Product Grid */
+.product-grid-pro {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
+
+.product-box-pro {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-box-pro h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    margin-bottom: 1px;
+}
+
+.product-box-pro:hover {
+    transform: scale(1.05);
+}
+
+.product-box-pro img {
+    width: 100%;
+    max-width: 320px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+}
+
+.product-box-pro .stars {
+    font-size: 25px;
+    color: #FFD700;
+    margin: 10px 0;
+    margin-top: 1px;
+}
+
+/* Get Tailored Button */
+.get-tailored {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #d32f2f;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.get-tailored:hover {
+    background: #a81919;
+}
+
+/* ===================================== */
+/* ========== Responsive Media Queries ==*/
+/* ===================================== */
+
+/* Large Laptops (1200px) */
+@media (max-width: 1200px) {
+
+  .product {
+    gap: 40px;
+  }
+
+  .product-info {
+    padding: 35px;
+  }
+
+  .product-grid-pro {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bulk-grid-pro {
+    gap: 40px;
+  }
+
+}
+
+
+/* Laptops / Small Desktop (1024px) */
+@media (max-width: 1024px) {
+
+  .section-p1 {
+    padding: 40px 40px;
+  }
+
+  .pro-container {
+    padding: 40px;
+  }
+
+  .product {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-info {
+    text-align: center;
+  }
+
+  .product-info h1 {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  #main-image {
+    max-width: 420px;
+  }
+
+  .product-grid-pro {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bulk-grid-pro {
+    grid-template-columns: 1fr;
+  }
+
+  .productwide-box-pro img {
+    height: 410px;
+  }
+
+}
+
+
+/* Tablets (768px) */
+@media (min-width: 481) and (max-width: 768px) {
+
+  h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+  .pro-container {
+    width: 95%;
+    padding: 30px;
+  }
+
+  .product-info {
+    padding: 30px;
+  }
+
+  #main-image {
+    max-width: 360px;
+  }
+
+  .product-grid-pro {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .bulk-grid-pro {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .productwide-box-pro img {
+    height: 150px;
+  }
+
+}
+
+
+/* Large Phones (480px) */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .section-title-det{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .section-title-det h2{
+    font-size: 28px;
+  }
+
+  .section-title .see-all{
+    font-size: 14px;
+    margin-top: 5px;
+    color: #d32f2f;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .section-p1 {
+    padding: 30px 20px;
+  }
+
+  .pro-container {
+    padding: 20px;
+  }
+
+  .product-info {
+    padding: 20px;
+  }
+
+  #main-image {
+    max-width: 300px;
+  }
+
+  .product-grid-pro {
+    grid-template-columns: 1fr;
+  }
+
+  .bulk-grid-pro {
+    grid-template-columns: 1fr;
+  }
+
+  .productwide-box-pro img {
+    height: 150px;
+  }
+
+}
+
+
+/* Small Phones (320px) */
+@media (max-width: 320px) {
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .product-info p {
+    font-size: 15px;
+  }
+
+  #main-image {
+    max-width: 250px;
+  }
+
+  .product-book-button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+}
