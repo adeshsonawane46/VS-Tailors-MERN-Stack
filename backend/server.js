@@ -12,8 +12,8 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: [
-    "http://localhost:5173",
-    "https://vs-tailors-frontend.vercel.app"
+    "https://www.vstailors.in",
+    "https://vstailors.in"
   ],
   credentials: true
 }));
