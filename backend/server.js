@@ -10,7 +10,13 @@ const appointmentRoutes = require("./routes/appointment");
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://vs-tailors-frontend.vercel.app"
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // MongoDB Connection
