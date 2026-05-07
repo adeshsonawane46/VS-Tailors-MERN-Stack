@@ -194,17 +194,17 @@ function About() {
 
           <div className="team-card">
             <div className="image-box bg-green">
-              <img src="/Images/Akash Photo.png" alt="Founder 2" />
+              <img src="/Images/Krushna.png" alt="Founder 2" />
             </div>
-            <h3>Akash Sonawane</h3>
+            <h3>Krushnal Patil</h3>
             <p className="role">Head of Marketing</p>
           </div>
 
           <div className="team-card">
             <div className="image-box bg-pink">
-              <img src="/Images/Adesh1 photo.png" alt="Founder 3" />
+              <img src="/Images/Akash Photo.png" alt="Founder 3" />
             </div>
-            <h3>Adesh Sonawane</h3>
+            <h3>Akash Sonawane</h3>
             <p className="role">Creative Director</p>
           </div>
         </div>
